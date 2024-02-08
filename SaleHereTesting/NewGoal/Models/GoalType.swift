@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct GoalType: Codable {
+    var iconName: String
+    var typeName: String
+}

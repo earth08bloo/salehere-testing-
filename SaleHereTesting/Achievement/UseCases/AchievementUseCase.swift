@@ -6,3 +6,23 @@
 //
 
 import Foundation
+
+protocol IAchievementUseCase {
+    func getAchievementList(completion: @escaping (AchievementRepository.GetAchievementListResult) -> Void)
+}
+
+class AchievementUseCase: IAchievementUseCase {
+   
+    private let achievementRepository: AchievementRepository
+
+    init(achievementRepository: AchievementRepository) {
+        self.achievementRepository = achievementRepository
+    }
+    
+    func getAchievementList(completion: @escaping (AchievementRepository.GetAchievementListResult) -> Void) {
+        self.achievementRepository.getAchievementList(completion: completion)
+    }
+
+
+}
+

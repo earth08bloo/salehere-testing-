@@ -1,0 +1,6 @@
+framework module Pods_SaleHereTesting {
+  umbrella header "Pods-SaleHereTesting-umbrella.h"
+
+  export *
+  module * { export * }
+}
